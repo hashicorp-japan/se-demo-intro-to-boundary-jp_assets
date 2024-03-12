@@ -202,7 +202,10 @@ locals {
               # not suppported image
               # image = "hashicorp/boundary-worker-hcp"
               image = "hashicorp/boundary-enterprise"
-              command = [ "boundary-worker" ]
+              # not work after changed a container path?
+              #command = [ "boundary-worker" ]
+              command = [ "boundary-enterprise" ]
+              # not work after changed a container path?
               args = [ "server", "-config", "/etc/boundary/boundary-worker-config" ]
               securityContext = {
                 capabilities = {
